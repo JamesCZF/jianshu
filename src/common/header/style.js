@@ -42,9 +42,42 @@ export const NavItem = styled.div`
   }
 `;
 
+export const SearchWrapper = styled.div`
+  position: relative;
+  float: left;
+  .fade-enter {
+    width: 160px;
+    transition: all .2s ease-out;
+  }
+  .fade-enter-active {
+    width: 240px;
+  }
+  .fade-exit {
+    transition: all .2s ease-out;
+  }
+  .fade-exit-active{
+    width: 160px;
+  }
+  .iconfont {
+    position:absolute;
+    right: 5px;
+    bottom: 5px;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    text-align: center;
+    &.focused {
+      background: #999;
+    }
+  }
+`;
+
 export const NavSearch = styled.input.attrs({
 	placeholder: '搜索'
 })`
+  &.focused {
+    width: 240px;
+  }
   width: 160px;
   height: 38px;
   margin-top: 9px;
